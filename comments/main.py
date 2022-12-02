@@ -27,8 +27,8 @@ def average_price():
     avg_price = total_price / count
     return avg_price
 
-def sum_of_total(a):
-    return sum(a)
+def sum_of_total():
+    return sum(desired_num_veg)
 # deze functie is goed herbruikbaar doordat er een loze variabele in wordt gebruikt
 
 
@@ -40,7 +40,7 @@ def discounted_of_sum_total():
 
 sum_one_each = sum_of_one_each()#ik denk eigenlijk dat deze overbodig is
 avg_price = average_price()#ik denk eigenlijk dat deze overbodig is
-sum_total = sum_of_total(desired_num_veg)
+sum_total = sum_of_total()
 """In deze functie wordt de herbruikbare functie gebruikt
 en word de lozevariabele (a) vervangen door (desired_num_veg)"""
 discounted_sum_total = discounted_of_sum_total()
