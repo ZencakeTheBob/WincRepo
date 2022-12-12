@@ -14,8 +14,8 @@ report = goal_string_g + "\n" + goal_string_m
 player = 'Ruud Gullit'
 first_name_end_index = slice(goal_scorer_g.find(" "))
 first_name = player[first_name_end_index]
-length_name_g = len(player)
-B = slice(player.find(" ")+ 1, length_name_g)
+length_name = len(player)
+B = slice(player.find(" ")+ 1, length_name)
 last_name_len = 6
 # Ik snap dat bovenstaande 2 regels wat hacky zijn. Wincpy verwacht echter dat 'last_name_len' 6 is. 
 # Ik maak er een object van waar ik de string slice en op die manier haal ik de achternaam eruit. 
