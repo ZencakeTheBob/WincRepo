@@ -8,12 +8,12 @@ goal_1 = 54
 last_name_m = 'van Basten'
 goal_string_g = goal_scorer_g + " scored in the " + str(goal_0) + "nd minute"
 goal_string_m = goal_scorer_m + " scored in the " + str(goal_1) + "th minute"
-scorers = goal_scorer_g + str(goal_0) + goal_scorer_m + str(goal_1)
+scorers = goal_scorer_g + str(goal_0) + ", " + goal_scorer_m + str(goal_1)
 report = goal_string_g + " and " + goal_string_m
 
 player = 'Ruud Gullit'
-first_name_g_stops_at = slice(goal_scorer_g.find(" Gullit"))
-first_name = goal_scorer_g[first_name_g_stops_at]
+first_name_end_index = slice(goal_scorer_g.find(" "))
+first_name = goal_scorer_g[first_name_end_index]
 length_name_g = len(goal_scorer_g)
 last_name_len = slice(goal_scorer_g.find("Gullit"),length_name_g)
 first_letter = goal_scorer_g[0]
