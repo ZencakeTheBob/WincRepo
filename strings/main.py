@@ -12,7 +12,7 @@ scorers = goal_scorer_g + " " + str(goal_0) + ", " + goal_scorer_m + " " + str(g
 report = goal_string_g + "\n" + goal_string_m
 
 player = 'Ruud Gullit'
-first_name_end_index = slice(goal_scorer_g.find(" "))
+first_name_end_index = slice(player.find(" "))
 first_name = player[first_name_end_index]
 length_name = len(player)
 B = slice(player.find(" ")+ 1, length_name)
@@ -22,8 +22,8 @@ last_name_len = 6
 # Er komt niet direct een int uit, maar een start en een end van een object. Dat vind ik logischer
 # Normaal gesproken heb ik dus in plaats van "B", "last_name_len", maar wincpy check vind dat niet correct en nu wel. 
 # De output klopt nu wel volledig. 
-first_letter = goal_scorer_g[0]
-name_short = first_letter + ". " + goal_scorer_g[B]
+first_letter = player[0]
+name_short = first_letter + ". " + player[B]
 
 first_name_length = len(first_name)
 chant = (first_name+"! ") * (int(first_name_length)-1) + (first_name + "!")
