@@ -13,7 +13,7 @@ report = goal_string_g + "\n" + goal_string_m
 
 player = 'Ruud Gullit'
 first_name_end_index = slice(goal_scorer_g.find(" "))
-first_name = goal_scorer_g[first_name_end_index]
+first_name = player[first_name_end_index]
 length_name_g = len(player)
 B = slice(player.find(" ")+ 1, length_name_g)
 last_name_len = 6
