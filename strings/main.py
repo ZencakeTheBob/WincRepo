@@ -1,42 +1,32 @@
 __winc_id__ = '71dd124b4a6e4d268f5973db521394ee'
 __human_name__ = 'Assignment: Strings'
 
-goal_scorer_g = 'Ruud Gullit'
+scorer_1 = 'Ruud Gullit'
 goal_0 = 32
-goal_scorer_m = 'Marco van Basten'
+scorer_2 = 'Marco van Basten'
 goal_1 = 54
-last_name_m = 'van Basten'
-goal_string_g = goal_scorer_g + " scored in the " + str(goal_0) + "nd minute"
-goal_string_m = goal_scorer_m + " scored in the " + str(goal_1) + "th minute"
-scorers = goal_scorer_g + " " + str(goal_0) + ", " + goal_scorer_m + " " + str(goal_1)
-report = goal_string_g + "\n" + goal_string_m
+nd = "nd minute"
+th = "th minute"
+scored = "scored in the"
+scorers = scorer_1 + " " + str(goal_0) + ", " + scorer_2 + " " + str(goal_1)
+report = f"{scorer_1} {scored} {str(goal_0)}{nd}\n{scorer_2} {scored} {str(goal_1)}{th}"
 
 player = 'Ruud Gullit'
-first_name_end_index = slice(player.find(" "))
-first_name = player[first_name_end_index]
+first_name = player[:player.find(" ")]
 length_name = len(player)
-B = slice(player.find(" ")+ 1, length_name)
-last_name_len = 6
-# Ik snap dat bovenstaande 2 regels wat hacky zijn. Wincpy verwacht echter dat 'last_name_len' 6 is. 
-# Ik maak er een object van waar ik de string slice en op die manier haal ik de achternaam eruit. 
-# Er komt niet direct een int uit, maar een start en een end van een object. Dat vind ik logischer
-# Normaal gesproken heb ik dus in plaats van "B", "last_name_len", maar wincpy check vind dat niet correct en nu wel. 
-# De output klopt nu wel volledig. 
-first_letter = player[0]
-name_short = first_letter + ". " + player[B]
+last_name = player[player.find(" ") +1:]
+last_name_len = len(last_name)
 
-first_name_length = len(first_name)
-chant = (first_name+"! ") * (int(first_name_length)-1) + (first_name + "!")
+name_short = player[0] + ". " + last_name
 
-length_chant = len(chant)
-a = slice(length_chant)
-last_character_chant = chant[a]
-good_chant = last_character_chant != " "
+chant = (first_name+"! ") * int(len(first_name)-1) + (first_name + "!")
+good_chant = chant[-1] != " "
 
-print(good_chant)
 print(scorers)
 print(report)
-print(first_letter)
 print(first_name)
 print(name_short)
 print(chant)
+print(good_chant)
+print(last_name)
+print(last_name_len)
