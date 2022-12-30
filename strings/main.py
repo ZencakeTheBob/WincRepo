@@ -20,6 +20,7 @@ last_name_len = len(last_name)
 name_short = player[0] + ". " + last_name
 
 chant = (first_name+"! ") * int(len(first_name)-1) + (first_name + "!")
+# Ik krijg van de docent te horen dat len sowieso een int geeft. VSC zegt echter dat dit een string is. Daarom cast ik het naar een int
 good_chant = chant[-1] != " "
 
 print(scorers)
