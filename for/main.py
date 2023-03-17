@@ -39,15 +39,12 @@ def most_vowels(countries):
 def alphabet_set(countries):
     alphabet = set(string.ascii_lowercase)
     countries_added = []
-    print(1)
     for country in sorted(countries, key=lambda vowel: len(set(vowel.lower()) - alphabet)):
         letter_set = set(country.lower())
         for letter in letter_set:
             if letter in alphabet:
-                print(country)
                 countries_added.append(country)
                 alphabet -= letter_set
-                print(countries_added)
         if alphabet == set():
             break
     return countries_added
