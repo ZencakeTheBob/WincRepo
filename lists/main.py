@@ -7,7 +7,8 @@ import random
 
 movies_list = ["armageddon", "lord of the rings", "up", "rush hour", "zorro", "the mask", "once upon a time", "the expendables"]
 williams_movies_won = ["Jaws", "Star Wars: Episode IV - A New Hope ", "E.T. the Extra-Terrestrial", "Memoirs of a Geisha"]
-some_toto_albums = ["Toto", "Hydra", "Turn Back", "Toto IV", "Isolation", "Fahrenheit", "The seventh one", "Kinfdom od Desire", "Tambu", "Mindfields", "Through the looking glass"]
+some_toto_albums = ["Toto", "Hydra", "Turn Back", "Toto IV", "Isolation", "Fahrenheit", "The seventh one", "Kinfdom od Desire",
+                    "Tambu", "Mindfields", "Old Is New", "Through the looking glass"]
 
 def alphabetical_order(a):
     a.sort()
@@ -34,4 +35,4 @@ def remove_toto_albums(original_list):
     original_list = [i for i in movies_list if i not in some_toto_albums]
     return original_list
 
-print(remove_toto_albums(movies_list))
+print(remove_toto_albums("Old Is New"))
