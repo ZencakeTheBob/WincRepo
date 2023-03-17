@@ -1,13 +1,11 @@
-from helpers import get_countries
-import string
-
 """ Leave this untouched. Wincpy uses it to match this assignment with the
 tests it runs. """
 __winc_id__ = "c545bc87620d4ced81cbddb8a90b4a51"
 __human_name__ = "for"
 
+from helpers import get_countries
+import string
 
-""" Write your functions here. """
 def shortest_names():
     shortest_length = len(min(countries, key=len))
     shortest_countries_list = []
@@ -45,8 +43,6 @@ def alphabet_set(countries):
 # It is not run if it is imported as a module: `from main import *`
 if __name__ == "__main__":
     countries = get_countries()
-
-    """ Write the calls to your functions here. """
 
 
 print(alphabet_set(countries))
