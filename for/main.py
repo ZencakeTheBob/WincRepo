@@ -53,9 +53,3 @@ def alphabet_set(countries):
     return countries_added
 
 print(alphabet_set(countries))
-
-##sorted(countries, key=lambda vowel: len(set(vowel.lower()) - alphabet)):
-#alphabet -= letter_set)
-#      print(alphabet)
-#      if alphabet.issubset(letter_set):
-#      print(3)
