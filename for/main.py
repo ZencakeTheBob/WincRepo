@@ -8,14 +8,6 @@ __human_name__ = "for"
 
 
 """ Write your functions here. """
-
-# This block is only run if this file is the entrypoint; python main.py
-# It is not run if it is imported as a module: `from main import *`
-if __name__ == "__main__":
-    countries = get_countries()
-
-    """ Write the calls to your functions here. """
-
 def shortest_names():
     shortest_length = len(min(countries, key=len))
     shortest_countries_list = []
@@ -48,5 +40,13 @@ def alphabet_set(countries):
         if alphabet == set():
             break
     return countries_added
+
+# This block is only run if this file is the entrypoint; python main.py
+# It is not run if it is imported as a module: `from main import *`
+if __name__ == "__main__":
+    countries = get_countries()
+
+    """ Write the calls to your functions here. """
+
 
 print(alphabet_set(countries))
